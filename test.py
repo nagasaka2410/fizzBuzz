@@ -28,14 +28,18 @@ for i in range(len(l) - 1):
 # 小さい順番に並べる
 list_m = sorted(list_m, key = lambda x: int(x[0]))
 
+# 結果出力用
+output = []
 
-# out = []
+# なかったら
+if not list_m:
+    output.append(m)
+    print(output[0])
 
-# if not str_list:
-#     out.append(integer)
-#     print(out[0])
-# else:
-#     for i in range(len(str_list)):
-#         out += str_list[i][1]
+# 存在したら
+else:
+    for i in range(len(list_m)):
+        output += list_m[i][1]
 
-#     print("".join(out))
+# 結合する
+    print(''.join(output))
